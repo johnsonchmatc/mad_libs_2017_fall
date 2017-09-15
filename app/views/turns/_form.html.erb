@@ -1,0 +1,37 @@
+<%= form_with(model: turn, local: true) do |form| %>
+  <% if turn.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(turn.errors.count, "error") %> prohibited this turn from being saved:</h2>
+
+      <ul>
+      <% turn.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :noun %>
+    <%= form.text_field :noun, id: :turn_noun %>
+  </div>
+
+  <div class="field">
+    <%= form.label :verb %>
+    <%= form.text_field :verb, id: :turn_verb %>
+  </div>
+
+  <div class="field">
+    <%= form.label :adverb %>
+    <%= form.text_field :adverb, id: :turn_adverb %>
+  </div>
+
+  <div class="field">
+    <%= form.label :adjective %>
+    <%= form.text_field :adjective, id: :turn_adjective %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

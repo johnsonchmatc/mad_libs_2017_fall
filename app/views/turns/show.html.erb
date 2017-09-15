@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Noun:</strong>
+  <%= @turn.noun %>
+</p>
+
+<p>
+  <strong>Verb:</strong>
+  <%= @turn.verb %>
+</p>
+
+<p>
+  <strong>Adverb:</strong>
+  <%= @turn.adverb %>
+</p>
+
+<p>
+  <strong>Adjective:</strong>
+  <%= @turn.adjective %>
+</p>
+
+<%= link_to 'Edit', edit_turn_path(@turn) %> |
+<%= link_to 'Back', turns_path %>

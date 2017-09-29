@@ -1,5 +1,6 @@
 class StaticPagesController < ApplicationController
   def home
+    @stories = Turn.all
   end
 
   def about

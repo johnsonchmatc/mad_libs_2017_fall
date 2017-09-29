@@ -3,5 +3,6 @@ class StaticPagesController < ApplicationController
   end
 
   def about
+    @gems = ["rails", "crypt", "sqlite"]
   end
 end

@@ -1,2 +1,17 @@
-<h1>StaticPages#about</h1>
-<p>Find me in app/views/static_pages/about.html.erb</p>
+<h1>The Gems we use are</h1>
+
+<table class="table table-striped table-hover ">
+  <thead>
+    <tr>
+      <th>Gem name</th>
+      </tr>
+  </thead>
+  <tbody>
+		<% @gems.each do |gem_name| %>
+    <tr>
+      <td><%= gem_name %></td>
+    </tr>
+		<% end %>
+
+	</tbody>
+</table>

@@ -1,4 +1,4 @@
-<%= form_with(model: turn, local: true) do |form| %>
+<%= form_with(model: turn, local: true, html: { class: 'form-horizontal' }) do |form| %>
   <% if turn.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(turn.errors.count, "error") %> prohibited this turn from being saved:</h2>
@@ -11,27 +11,39 @@
     </div>
   <% end %>
 
-  <div class="field">
-    <%= form.label :noun %>
-    <%= form.text_field :noun, id: :turn_noun %>
+  <div class="form-group">
+		<%= form.label :noun, class: 'col-lg-2 control-label'%>
+    <div class="col-lg-10">
+			<%= form.text_field :noun, id: :turn_noun, class: 'form-control' %>
+    </div>
   </div>
 
-  <div class="field">
-    <%= form.label :verb %>
-    <%= form.text_field :verb, id: :turn_verb %>
+  <div class="form-group">
+		<%= form.label :verb, class: 'col-lg-2 control-label'%>
+    <div class="col-lg-10">
+			<%= form.text_field :verb, id: :turn_verb, class: 'form-control' %>
+    </div>
   </div>
 
-  <div class="field">
-    <%= form.label :adverb %>
-    <%= form.text_field :adverb, id: :turn_adverb %>
+  <div class="form-group">
+		<%= form.label :adverb, class: 'col-lg-2 control-label'%>
+    <div class="col-lg-10">
+			<%= form.text_field :adverb, id: :turn_adverb, class: 'form-control' %>
+    </div>
   </div>
 
-  <div class="field">
-    <%= form.label :adjective %>
-    <%= form.text_field :adjective, id: :turn_adjective %>
+  <div class="form-group">
+		<%= form.label :adjective, class: 'col-lg-2 control-label'%>
+    <div class="col-lg-10">
+			<%= form.text_field :adjective, id: :turn_adjective, class: 'form-control' %>
+    </div>
   </div>
 
-  <div class="actions">
-    <%= form.submit %>
+  <div class="form-group">
+    <div class="col-lg-10 col-lg-offset-2">
+			<%= link_to 'Back', turns_path, class: 'btn btn-default' %>
+      
+			<%= form.button 'Submit', type: 'submit', class: 'btn btn-primary' %>
+    </div>
   </div>
 <% end %>

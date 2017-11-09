@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :stories
 	get    'login'   => 'sessions#new'
 	get    'signup'  => 'users#new'
 	post   'login'   => 'sessions#create'

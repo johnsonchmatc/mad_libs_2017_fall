@@ -69,6 +69,10 @@ class TurnsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def turn_params
-      params.require(:turn).permit(:noun, :verb, :adverb, :adjective)
+      params.require(:turn).permit(:noun,
+                                   :verb,
+                                   :adverb,
+                                   :adjective,
+                                   :story_id)
     end
 end

@@ -2,7 +2,7 @@
 
 <% @stories.each do |turn| %>
 <blockquote>
-  <p><%= create_story_for_view(turn) %></p>
+  <p><%= turn.generate_story %></p>
   <small>Someone famous in <cite title="Source Title">Source Title</cite></small>
 </blockquote>
 <% end %>

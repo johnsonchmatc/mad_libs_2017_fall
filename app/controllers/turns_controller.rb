@@ -1,5 +1,6 @@
 class TurnsController < ApplicationController
   before_action :set_turn, only: [:show, :edit, :update, :destroy]
+  before_action :set_stories, only: [:new, :edit, :create, :update]
 
   # GET /turns
   # GET /turns.json
@@ -65,6 +66,10 @@ class TurnsController < ApplicationController
     # Use callbacks to share common setup or constraints between actions.
     def set_turn
       @turn = Turn.find(params[:id])
+    end
+
+    def set_stories
+      @stories = Story.all
     end
 
     # Never trust parameters from the scary internet, only allow the white list through.

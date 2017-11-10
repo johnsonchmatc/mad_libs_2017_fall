@@ -12,6 +12,13 @@
   <% end %>
 
   <div class="form-group">
+		<%= form.label :story_id, "Story",  class: 'col-lg-2 control-label'%>
+    <div class="col-lg-10">
+      <%= collection_select(:turn, :story_id, @stories, :id, :content, { prompt: true }, { class: 'form-control' }) %>
+    </div>
+  </div>
+
+  <div class="form-group">
 		<%= form.label :noun, class: 'col-lg-2 control-label'%>
     <div class="col-lg-10">
 			<%= form.text_field :noun, id: :turn_noun, class: 'form-control' %>
@@ -42,7 +49,7 @@
   <div class="form-group">
     <div class="col-lg-10 col-lg-offset-2">
 			<%= link_to 'Back', turns_path, class: 'btn btn-default' %>
-      
+
 			<%= form.button 'Submit', type: 'submit', class: 'btn btn-primary' %>
     </div>
   </div>

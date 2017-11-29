@@ -1,5 +1,4 @@
 Rails.application.routes.draw do
-  resources :stories
 	get    'login'   => 'sessions#new'
 	get    'signup'  => 'users#new'
 	post   'login'   => 'sessions#create'
@@ -9,6 +8,8 @@ Rails.application.routes.draw do
 
   resources :users, except: [:new]
   resources :turns
+  resources :account_activations, only: [:edit]
+
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
   root 'static_pages#home'
 end

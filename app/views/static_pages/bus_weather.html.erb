@@ -1,0 +1,15 @@
+<h1>Weather for Madison Bus Routes</h1>
+<table>
+  <tr>
+    <th>Stop</th>
+    <th>Route</th>
+    <th>Weather</th>
+  </tr>
+<% @stop_collection.each do |stop| %>
+  <tr>
+    <td><%=stop.stop_id %></td>
+    <td><%=stop.route %></td>
+    <td><%= weather_for_lat_and_lon(stop.lat, stop.lon) %></td>
+  </tr>
+<% end %>
+</table>

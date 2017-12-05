@@ -1,8 +1,10 @@
 <h1>Welcome to MadLibs 2017 y'all</h1>
 
-<% @stories.each do |turn| %>
-<blockquote>
-  <p><%= turn.generate_story %></p>
-  <small>Someone famous in <cite title="Source Title">Source Title</cite></small>
-</blockquote>
-<% end %>
+<div id="stories">
+</div>
+
+<img src='http://www.fostersystems.com/ccdata/images/spinner.gif' id='next_page_spinner' />
+
+
+
+<%= javascript_include_tag 'pagination' %>

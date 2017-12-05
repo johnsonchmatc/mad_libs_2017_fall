@@ -4,7 +4,8 @@ Rails.application.routes.draw do
 	post   'login'   => 'sessions#create'
 	delete 'logout'  => 'sessions#destroy'
 
-  get '/about', to: 'static_pages#about'
+  get 'about', to: 'static_pages#about'
+  get 'busweather', to: 'static_pages#bus_weather'
 
   resources :users, except: [:new]
   resources :turns
